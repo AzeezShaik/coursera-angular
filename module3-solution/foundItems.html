@@ -1,0 +1,19 @@
+<table>
+
+<div ng-if="menu.items.length != 0">
+<tr>
+    <th>ShortName</th>
+    <th>Name</th> 
+    <th>Description</th>
+    <th>Remove Item </th>
+  </tr>
+</div>
+  <tr ng-repeat="item in menu.items">
+    <td> {{ item.short_name }}  </td>
+    <td> {{ item.name }}  </td>
+    <td> {{item.description}} </td>
+    
+    <td> <button ng-click="menu.onRemove({index: $index});">Don't want this one!</button> </td>
+  </tr>
+
+</table>

@@ -1,13 +1,13 @@
-<table>
-
-<div ng-if="menu.items.length != 0">
-<tr>
+<table ng-if="menu.items.length != 0">
+ 
+  <tr ng-if="menu.items.length > 0">
     <th>ShortName</th>
     <th>Name</th> 
     <th>Description</th>
     <th>Remove Item </th>
   </tr>
-</div>
+  
+
   <tr ng-repeat="item in menu.items">
     <td> {{ item.short_name }}  </td>
     <td> {{ item.name }}  </td>

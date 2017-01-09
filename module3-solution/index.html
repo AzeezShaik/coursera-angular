@@ -16,7 +16,7 @@
   <div ng-controller='NarrowitDownController as menu'>
     
     <div class="form-group">
-      <input type="text" ng-model="menu.searchTerm" placeholder="search term" class="form-control">
+      <input type="text" ng-model="menu.searchTerm" placeholder="Search Term" class="form-control">
     </div>
     
     <div class="form-group narrow-button">
@@ -36,7 +36,7 @@
     </ul>
     </div> -->
 
-    <div ng-if="menu.items.length == 0" class="noItems"> Nothing found </div>
+    <div class="noItems"> {{menu.errorMessage}} </div>
     <div ng-if="menu.items.length != 0">
      <found-items 
         items="menu.items" 
